@@ -1,0 +1,43 @@
+version: '3.1'
+
+services:
+    mysql:  
+      image: mysql:5.7.22
+      container_name: game_db
+      tty: true
+      environment:
+        MYSQL_DATABASE: game_desenv
+        MYSQL_ROOT_PASSWORD: root
+        SERVICE_TAGS: dev
+        SERVICE_NAME: mysql
+      restart: unless-stopped
+      ports:
+        - 3306:3306
+      volumes:
+        - dbdata:/var/lib/mysql/
+      networks:
+        - default
+
+    game:
+        build: 
+            context: .
+            dockerfile: Dockerfile
+        container_name: game
+        hostname: game
+        restart: unless-stopped
+        volumes:
+            - ./:/var/www/html
+        ports:
+            - 80:80
+            - 443:443
+        depends_on:
+            - mysql
+        networks:
+            - default
+
+volumes:
+  dbdata:
+    driver: local
+
+networks:
+    default:
