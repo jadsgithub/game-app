@@ -11,7 +11,10 @@ $(function(){
 
     $("#simulate").on('click', function(){
         let form = '#form-new-championship';
-        validate(form);
+        if(validate(form)){
+            $(form).submit();
+        }
+
     });
 
     $("#table-view-championship").DataTable({

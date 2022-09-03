@@ -8,55 +8,56 @@
         </div>
         <div class="modal-body">
             <div class="container-fluid">
-                <form id="form-new-championship">
+                <form method="POST" action="{{route('simulation')}}" id="form-new-championship">
+                    @csrf
                     <div class="row">
                         <span style="text-align:left; margin-bottom:10px;">Informe o nome dos times.</span>
                         <div class="col-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text">Time 01</span>
-                                <input type="text" class="form-control" name="time-01" id="time-01" required>
+                                <input type="text" class="form-control" name="time01" id="time01" required>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text">Time 02</span>
-                                <input type="text" class="form-control" name="time-02" id="time-02" required>
+                                <input type="text" class="form-control" name="time02" id="time02" required>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text">Time 03</span>
-                                <input type="text" class="form-control" name="time-03" id="time-03" required>
+                                <input type="text" class="form-control" name="time03" id="time03" required>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text">Time 04</span>
-                                <input type="text" class="form-control" name="time-04" id="time-04" required>
+                                <input type="text" class="form-control" name="time04" id="time04" required>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text">Time 05</span>
-                                <input type="text" class="form-control" name="time-05" id="time-05" required>
+                                <input type="text" class="form-control" name="time05" id="time05" required>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text">Time 06</span>
-                                <input type="text" class="form-control" name="time-06" id="time-06" required>
+                                <input type="text" class="form-control" name="time06" id="time06" required>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text">Time 07</span>
-                                <input type="text" class="form-control" name="time-07" id="time-07" required>
+                                <input type="text" class="form-control" name="time07" id="time07" required>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="input-group mb-3">
                                 <span class="input-group-text">Time 08</span>
-                                <input type="text" class="form-control" name="time-08" id="time-08" required>
+                                <input type="text" class="form-control" name="time08" id="time08" required>
                             </div>
                         </div>
                         <span class="field-text-error" style="color:red"></span>
