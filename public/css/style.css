@@ -1,0 +1,10 @@
+div.dataTables_wrapper div.dataTables_length label{
+    float: left;
+}
+div.dataTables_wrapper div.dataTables_info {
+    float: left;
+}
+.active>.page-link, .page-link.active {
+    background-color: black;
+    border-color: black;
+}
