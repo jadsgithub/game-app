@@ -10,6 +10,7 @@ class Team extends Model
     public $timestamps = true;
     protected $table = 'teams';
     protected $fillable = [
-        'team_name'
+        'team_name',
+        'flag'
     ];
 }

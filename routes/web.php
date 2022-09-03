@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('champioship');
+    return view('home');
 });
 
 Route::post('/simulation', 'App\Http\Controllers\GameController@simulation')->name('simulation');

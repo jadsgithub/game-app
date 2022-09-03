@@ -29,7 +29,8 @@ class GameController extends Controller
             for ($i=1; $i < 9; $i++) { 
 
                 $team = Team::create([
-                    'team_name' => $request["time0$i"]
+                    'team_name' => $request["time0$i"],
+                    'flag' => "images/flags/flag0$i.svg"
                 ]);
 
                 if($i % 2 != 0){
@@ -62,6 +63,12 @@ class GameController extends Controller
             $this->resultRound($resultRound2, $game->id, 4, "team_winner_id");
 
             DB::commit();
+
+            $teams = Team::pluck('team_name', 'id');
+            $flags = Team::pluck('flag', 'id');
+            $finalResult = Result::where('game_id', $game->id)->get();
+
+            return view('championship', compact('teams', 'flags', 'finalResult'));
         } catch (\Exception $e) {
             DB::rollback();   
             Log::info($e);        
