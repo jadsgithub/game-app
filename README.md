@@ -9,8 +9,8 @@ git clone https://github.com/jadsgithub/game-app.git
 ```
 ## Passo 2 - Instalar e configurar o Docker
 
-Caso ainda não possua o docker instalado, realizar a instalação através do link: [Docker](https://www.docker.com/)
-Caso não tenha familiaridade com o docker, siga alguns passos para configuração no Windows [Config-Docker]https://docs.docker.com/desktop/install/windows-install/
+Caso ainda não possua o docker instalado, realizar a instalação através do link: [Docker](https://www.docker.com/).
+Caso não tenha familiaridade com o docker, siga alguns passos para configuração no Windows [Config-Docker](https://docs.docker.com/desktop/install/windows-install/)
 
 ## Passo 3 - Executar o Docker
 
