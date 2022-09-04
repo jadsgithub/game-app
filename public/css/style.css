@@ -8,3 +8,6 @@ div.dataTables_wrapper div.dataTables_info {
     background-color: black;
     border-color: black;
 }
+table{
+    width: 100% !important;
+}

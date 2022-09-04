@@ -19,6 +19,6 @@
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js" ></script>
 
     <!-- Especific Page CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{asset('css/style.css')}}" rel="stylesheet">
     @yield('style-css')
 </head>

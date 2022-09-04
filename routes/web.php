@@ -17,4 +17,11 @@ Route::get('/', function () {
     return view('home');
 });
 
+// Simulate Championship
 Route::post('/simulation', 'App\Http\Controllers\GameController@simulation')->name('simulation');
+
+// Get List Championships
+Route::get('/list', 'App\Http\Controllers\ResultController@listChampionships')->name('listChampionships');
+
+// View Others Championships
+Route::get('/others/{id}', 'App\Http\Controllers\ResultController@othersChampionships')->name('othersChampionships');

@@ -10,6 +10,6 @@
 @include('modals.new-championship') 
 @include('modals.view-championship')
 <!-- Especific Page JS-->
-<script src="js/script.js" ></script>
+<script src="{{asset('js/script.js')}}" ></script>
 @yield('script-js')
 </body>

@@ -16,7 +16,14 @@ return new class extends Migration
         Schema::create('games', function (Blueprint $table) {
             $table->increments('id');
             $table->string('game_name');
+            $table->integer('winner_id')->unsigned()->index()->nullable();
+            $table->integer('second_id')->unsigned()->index()->nullable();
+            $table->integer('third_id')->unsigned()->index()->nullable();
             $table->timestamps();
+
+            $table->foreign('winner_id')->references('id')->on('teams');
+            $table->foreign('second_id')->references('id')->on('teams');
+            $table->foreign('third_id')->references('id')->on('teams');
         });
     }
 

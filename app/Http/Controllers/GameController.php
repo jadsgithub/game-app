@@ -15,9 +15,10 @@ class GameController extends Controller
     {
         try {
             DB::beginTransaction();
+
             // Create Game
             $game = Game::create([
-                'game_name' => 'Meu Campeonato - '.date('d-m-Y H:i')
+                'game_name' => 'Meu Campeonato - '.date('d-m-Y H:i'),
             ]);
 
             $score01 = 0;
@@ -66,9 +67,11 @@ class GameController extends Controller
 
             $teams = Team::pluck('team_name', 'id');
             $flags = Team::pluck('flag', 'id');
+            $game = Game::find($game->id);
+            Log::info($game->game_name);
             $finalResult = Result::where('game_id', $game->id)->get();
 
-            return view('championship', compact('teams', 'flags', 'finalResult'));
+            return view('championship', compact('teams', 'flags', 'finalResult', 'game'));
         } catch (\Exception $e) {
             DB::rollback();   
             Log::info($e);        

@@ -18,6 +18,19 @@ $(function(){
     });
 
     $("#table-view-championship").DataTable({
+        processing: true,
+        serverSide: true,
+        ajax: '/list',
+        columns: [
+            {data: 'id'},
+            {data: 'date'},
+            {data: 'name'},
+            {data: 'winner'},
+            {data: 'second'},
+            {data: 'third'},
+            {data: 'action'}
+        ],
+
         "bJQueryUI": true,
         "oLanguage": {
             "sProcessing":   "Processando...",

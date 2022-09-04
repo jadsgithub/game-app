@@ -2,8 +2,16 @@
 
 @section('main')
 
+<div class="row" style="margin-top: 30px;">
+    <div class="col-8">
+        <span class='fs-6' style="float: left"> Nome Campeonato: {{$game->game_name}}</span>
+    </div>
+    <div class="col-4">
+        <span class='fs-6' style="float: right"> Data Campeonato: {{App\Http\Controllers\ComponentsController::decodeDate($game->created_at)}}</span>
+    </div>
+</div>
 {{-- Quartas de final --}}
-<div class="row" style="border: solid 1px #11944a;border-radius: 10px;padding: 8px 0px 20px 0px;margin-top: 30px;">
+<div class="row" style="border: solid 1px #11944a;border-radius: 10px;padding: 8px 0px 20px 0px;">
     <span class="fs-3">Quartas de final</span>
     @foreach($finalResult as $key)
         @if($key->round == 1)
